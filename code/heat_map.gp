@@ -14,4 +14,4 @@ set border linewidth 1.5
 # Plot as a heatmap with square cells
 set view map
 set size ratio -0.05
-plot "demo3.tsv" matrix with image
+plot "big.tsv" matrix with image
