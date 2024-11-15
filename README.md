@@ -24,4 +24,12 @@ cat data/q2_data.tsv | Rscript question2.R "outputs/different_clusters.png" "Rel
 ```bash
   cat data/first_hundred_numbers.tsv | python group_in_quantiles.py 4 > output_q4_2.tsv
 ```
-#
+# Q5: Plotting big matrix (Linux + Gnuplot)
+
+    **Downnload the Data**
+    ```bash
+    curl -JLO https://figshare.com/ndownloader/files/49000657?private_link=9f1324117c2f6e734f2b -O big_data.tsv.gz
+    ```
+    **Getting the matrix which will be used for GNUplot**
+      Here we remove the first column since it is a string.
+      
