@@ -5,5 +5,7 @@
   If a match is found, the line is written to an output file called *matched.tsv*.
   ```bash
   zcat data/q1_data.tsv.gz | awk 'NR==1||/ENSG/'  | python assignment1.py data/to_select.tsv  > matched.tsv
+ ```
 
-**# Q2: Plotting a group of lines (R + Linux Command)**
+# Q2: Plotting a group of lines (R + Linux Command)
+  
