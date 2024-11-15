@@ -25,11 +25,24 @@ cat data/q2_data.tsv | Rscript question2.R "outputs/different_clusters.png" "Rel
   cat data/first_hundred_numbers.tsv | python group_in_quantiles.py 4 > output_q4_2.tsv
 ```
 # Q5: Plotting big matrix (Linux + Gnuplot)
-
-    **Downnload the Data**
+  **Download the Data**
     ```bash
     curl -JLO https://figshare.com/ndownloader/files/49000657?private_link=9f1324117c2f6e734f2b -O big_data.tsv.gz
     ```
-    **Getting the matrix which will be used for GNUplot**
+  **Getting the matrix which will be used for GNUplot**
       Here we remove the first column since it is a string.
+      ```bash
+      awk '{ $1=""; print $0 }' big.tsv
+      ```
+  **Install and Run GNUPLOT**
+  ```bash
+    sudo apt install gnuplot
+    gnuplot heatmap.gp
+  ```
+  **Installing Ghostscript to use ps2pdf and converting eps to pdf and opening pdf to get the heatmap**
+  ```bash
+    sudo apt install ghostscript
+    ps2pdf optimised_matrix.eps
+    xdg-open optimised_matrix.pdf
+
       
