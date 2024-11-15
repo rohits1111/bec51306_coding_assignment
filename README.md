@@ -19,3 +19,9 @@ cat data/q2_data.tsv | Rscript question2.R "outputs/different_clusters.png" "Rel
   ```bash
   Rscript join_list_of_files.R data/list_q3.tsv  > data/join_output.tsv
   ```
+# Q4: Label with quantiles (Python)
+  Imported the sys module, which allows the script to read input from standard input (stdin) and access command-line arguments. Imported the pandas library, which provides powerful data manipulation and analysis functions, including the qcut function used   here for quantile calculations. The script reads numbers from standard input. It calculates the quantiles, assigning each number a quantile label and an interval.It then prints each number, its quantile label, and the interval range in a formatted     manner.
+```bash
+  cat data/first_hundred_numbers.tsv | python group_in_quantiles.py 4 > output_q4_2.tsv
+```
+#
